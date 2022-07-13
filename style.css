@@ -1,0 +1,103 @@
+.playlist-wrapper {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.player-wrapper {
+  height: 500px;
+  flex: 1 0 auto;
+  margin-right: 40px;
+  position: relative;
+}
+
+.playlist-thumb-container {
+  flex: 0 0 325px;
+  float: left;
+}
+
+#playlistThumb {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#playlistThumb::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+}
+
+/* Track */
+#playlistThumb::-webkit-scrollbar-track {
+    background: transparent;
+}
+ 
+/* Handle */
+#playlistThumb::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.7); 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+#playlistThumb::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+#playlistThumb:hover::-webkit-scrollbar {
+  display: block;
+}
+
+#video-icon {
+  cursor: pointer;
+  position: relative;
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+#video-icon:last-of-type {
+  margin-bottom: 0;
+}
+
+button {
+  background: none;
+  border: 0;
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  outline: none;
+  cursor: pointer;
+}
+
+#video-icon:hover .ytp-md-pay-btn {
+  fill: #f00;
+  fill-opacity: 1;
+  transition: fill .1s cubic-bezier(0.0,0.0,0.2,1),fill-opacity .1s cubic-bezier(0.0,0.0,0.2,1);
+}
+
+.save_spinner {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 4px solid;
+    border-color: #0084ff #0084ff #EEF0F0;
+    border-radius: 100%;
+    animation: saving 1s linear infinite;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  
+ }
+
+@keyframes saving {
+    to {
+        transform: rotate(360deg);
+    }
+}
